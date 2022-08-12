@@ -1,0 +1,9 @@
+import pandas as pd
+
+def num_missing(df):
+	null_counts = []
+	for col in df:
+        var = {}
+        var[col] = df.isnull().sum()
+        null_counts.append(var)
+    return null_counts
